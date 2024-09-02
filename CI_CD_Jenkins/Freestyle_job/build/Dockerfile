@@ -3,7 +3,9 @@ FROM alpine:latest
 WORKDIR /web_app
 
 RUN apk update && \
-    apk add nginx
+    apk add nginx && \
+    cd .. && \
+    ls -Rla
 
 COPY ../nginx/index.html /var/www/html/index.html
 
