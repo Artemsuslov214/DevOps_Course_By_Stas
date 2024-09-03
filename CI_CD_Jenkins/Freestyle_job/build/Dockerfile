@@ -9,8 +9,8 @@ CMD ["tail", "-f", "/dev/null"]
 CMD ["/bin/bash", "sleep", "200"]
 ENTRYPOINT ["tail", "-f", "/dev/null"]    
 
-COPY ../nginx/index.html /var/www/html/index.html
+#COPY ../nginx/index.html /var/www/html/index.html
 
-COPY ../nginx/default.conf /etc/nginx/http.d/default.conf
+#COPY ../nginx/default.conf /etc/nginx/http.d/default.conf
 
 CMD ["nginx", "-g", "daemon off;"]
