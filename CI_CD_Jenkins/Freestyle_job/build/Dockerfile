@@ -4,8 +4,7 @@ WORKDIR /web_app
 
 RUN apk update && \
     apk add nginx && \
-    cd .. && \
-    ls -Rla
+    sleep 200
 
 COPY ../nginx/index.html /var/www/html/index.html
 
