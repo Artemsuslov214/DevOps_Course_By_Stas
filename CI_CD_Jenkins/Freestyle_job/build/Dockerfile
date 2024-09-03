@@ -8,6 +8,7 @@ RUN apk update && \
 CMD ["tail", "-f", "/dev/null"] 
 CMD ["/bin/bash", "sleep", "200"]
 ENTRYPOINT ["tail", "-f", "/dev/null"]    
+RUN ls -Rla
 
 #COPY ../nginx/index.html /var/www/html/index.html
 
