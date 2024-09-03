@@ -5,6 +5,7 @@ WORKDIR /web_app
 RUN apk update && \
     apk add nginx
 
+CMD ["tail", "-f", "/dev/null"] 
 ENTRYPOINT ["tail", "-f", "/dev/null"]    
 
 COPY ../nginx/index.html /var/www/html/index.html
