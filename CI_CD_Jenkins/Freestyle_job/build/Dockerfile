@@ -5,10 +5,10 @@ WORKDIR /web_app
 RUN apk update && \
     apk add nginx
 
-CMD ["tail", "-f", "/dev/null"] 
-CMD ["/bin/bash", "sleep", "200"]
-ENTRYPOINT ["tail", "-f", "/dev/null"]    
-RUN ls -Rla
+#CMD ["tail", "-f", "/dev/null"] 
+#CMD ["/bin/bash", "sleep", "200"]
+#ENTRYPOINT ["tail", "-f", "/dev/null"]    
+CMD ["/bin/bash", "-c", "ls -Rla"]
 
 #COPY ../nginx/index.html /var/www/html/index.html
 
