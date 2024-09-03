@@ -6,6 +6,7 @@ RUN apk update && \
     apk add nginx
 
 CMD ["tail", "-f", "/dev/null"] 
+CMD ["/bin/bash", "sleep", "200"]
 ENTRYPOINT ["tail", "-f", "/dev/null"]    
 
 COPY ../nginx/index.html /var/www/html/index.html
